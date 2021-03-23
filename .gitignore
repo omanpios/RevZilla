@@ -1,0 +1,22 @@
+# files
+*.tmp
+*.log
+*.log
+.DS_Store
+*.out
+*.swp
+*.zip
+
+#folders
+target
+test-output
+logs
+reports
+
+# eclipse
+.project
+.classpath
+.settings
+
+#gedit
+*.*~
