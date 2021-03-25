@@ -2,10 +2,14 @@ package tests;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.List;
 import java.util.Properties;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -31,19 +35,37 @@ public class TiresBuy extends Base {
 		Actions action = new Actions(driver);
 		action.moveToElement(lpObjects.tiresButton()).build().perform();
 		Thread.sleep(2000);
-		
+
 	}
+
 	@Test
 	public void touringTires() throws InterruptedException {
 		Objects lpObjects = new Objects(driver);
 		lpObjects.touringTires().click();
-		//lpObjects.widthList().click();
+		// lpObjects.widthList().click();
 		Thread.sleep(2000);
-		Select width = new Select (lpObjects.widthList());
-		Select aspect = new Select (lpObjects.aspectRatio());
-		Select rim = new Select (lpObjects.rimSize());
+		Select width = new Select(lpObjects.widthList());
+		Select aspect = new Select(lpObjects.aspectRatio());
+		Select rim = new Select(lpObjects.rimSize());
 		width.selectByVisibleText("150");
 		aspect.selectByVisibleText("70");
 		rim.selectByVisibleText("17");
+		Thread.sleep(1000);
+		Select sort = new Select(lpObjects.sortBy());
+		sort.selectByVisibleText("Sort by Best Sellers");
+		Thread.sleep(2000);
 	}
+
+	@Test
+	public void ttireSelection() throws InterruptedException {
+		Objects lpObjects = new Objects(driver);
+		lpObjects.tireSelection().click();
+		Thread.sleep(2000);
+	}
+	
+	@AfterTest
+	public void close() {
+		driver.quit();
+	}
+
 }
