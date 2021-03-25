@@ -17,6 +17,8 @@ public class Objects {
 	By widthList = By.cssSelector("select[data-field-name='Width']");
 	By aspectRatio = By.cssSelector("select[data-field-name='Aspect Ratio']");
 	By rimSize = By.cssSelector("select[data-field-name='Rim Size']");
+	By tireSelection = By.cssSelector("div.product-tile__image-wrapper");
+	By sortBy = By.cssSelector("select[data-field-name='Sort by']");
 
 	public WebElement homeButton() {
 		return driver.findElement(homeButton);
@@ -33,12 +35,20 @@ public class Objects {
 	public WebElement widthList() {
 		return driver.findElement(widthList);
 	}
-	
+
 	public WebElement aspectRatio() {
 		return driver.findElement(aspectRatio);
 	}
-	
+
 	public WebElement rimSize() {
 		return driver.findElement(rimSize);
+	}
+
+	public WebElement tireSelection() {
+		return driver.findElement(tireSelection);
+	}
+
+	public WebElement sortBy() {
+		return driver.findElement(sortBy);
 	}
 }
