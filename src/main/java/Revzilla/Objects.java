@@ -19,6 +19,9 @@ public class Objects {
 	By rimSize = By.cssSelector("select[data-field-name='Rim Size']");
 	By tireSelection = By.cssSelector("div.product-tile__image-wrapper");
 	By sortBy = By.cssSelector("select[data-field-name='Sort by']");
+	By shippingTo = By.xpath("//header/div[1]/section[2]/section[1]/section[1]/div[1]/a[1]");
+	By lowestPrice = By.xpath("//header/div[1]/section[2]/section[1]/section[1]/div[1]/a[2]");
+	By closePopup = By.xpath("//body/div[6]/div[1]/div[1]");
 
 	public WebElement homeButton() {
 		return driver.findElement(homeButton);
@@ -50,5 +53,17 @@ public class Objects {
 
 	public WebElement sortBy() {
 		return driver.findElement(sortBy);
+	}
+
+	public WebElement shippingTo() {
+		return driver.findElement(shippingTo);
+	}
+
+	public WebElement lowestPrice() {
+		return driver.findElement(lowestPrice);
+	}
+
+	public WebElement closePopup() {
+		return driver.findElement(closePopup);
 	}
 }
