@@ -6,9 +6,16 @@
 		<listener class-name="tests.Listeners" />
 	</listeners>
 
-	<test name="Test">
+	<test name="TiresBuy">
 		<classes>
 			<class name="tests.TiresBuy" />
 		</classes>
 	</test>
+	
+	<test name="TopButtons">
+		<classes>
+			<class name="tests.TopButtons" />
+		</classes>
+	</test>
+	
 </suite>
