@@ -5,7 +5,7 @@
 * [Project Setup](#maven-setup)
 
 ## General info
-This project is an automation of product selection and top buttons validation of website www.revzila.com.
+This project is an automation of product selection and top buttons validation of website www.revzilla.com.
 	
 ## Technologies
 Project is created with:
