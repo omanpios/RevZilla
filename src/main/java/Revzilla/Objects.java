@@ -21,7 +21,9 @@ public class Objects {
 	By sortBy = By.cssSelector("select[data-field-name='Sort by']");
 	By shippingTo = By.xpath("//header/div[1]/section[2]/section[1]/section[1]/div[1]/a[1]");
 	By lowestPrice = By.xpath("//header/div[1]/section[2]/section[1]/section[1]/div[1]/a[2]");
-	By closePopup = By.xpath("//body/div[6]/div[1]/div[1]");
+	By selfService = By.xpath("//header/div[1]/section[2]/section[1]/section[1]/div[1]/a[3]");
+	By closePopup = By.className("reveal-header__close");
+	
 
 	public WebElement homeButton() {
 		return driver.findElement(homeButton);
@@ -63,6 +65,9 @@ public class Objects {
 		return driver.findElement(lowestPrice);
 	}
 
+	public WebElement selfService() {
+		return driver.findElement(selfService);
+	}
 	public WebElement closePopup() {
 		return driver.findElement(closePopup);
 	}

@@ -4,11 +4,15 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.BrowserType;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import Revzilla.Objects;
+import junit.framework.Assert;
 import resources.Base;
 
 public class TopButtons extends Base {
@@ -25,16 +29,28 @@ public class TopButtons extends Base {
 	}
 
 	@Test
-	public void shippingTo() throws InterruptedException {
-		Objects lpObjects = new Objects(driver);
-		lpObjects.shippingTo().click();
-	}
-
-
-	@Test
-	public void lowestPrice() {
+	public void lowestPrice() throws InterruptedException {
 		Objects lpObjects = new Objects(driver);
 		lpObjects.lowestPrice().click();
+		Thread.sleep(2000);
+
+	}
+	@Test
+	public void selfService() throws InterruptedException {
+		Objects lpObjects = new Objects(driver);
+		lpObjects.closePopup().click();
+		driver.switchTo().defaultContent();
+		lpObjects.selfService().click();
+		Thread.sleep(2000);
+	}
+
+	@Test
+	public void shippingTo() throws InterruptedException {
+		Objects lpObjects = new Objects(driver);
+		lpObjects.closePopup().click();
+		driver.switchTo().defaultContent();
+		lpObjects.shippingTo().click();
+		Thread.sleep(2000);
 	}
 
 	@AfterTest
