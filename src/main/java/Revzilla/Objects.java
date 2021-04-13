@@ -13,7 +13,7 @@ public class Objects {
 
 	By homeButton = By.xpath("//header/div[1]/section[1]/a[1]");
 	By tiresButton = By.xpath("/html/body/header/section/div/nav/ul[1]/li[6]");
-	By touringTires = By.cssSelector("a[href='/touring-motorcycle-tires']");
+	By touringTires = By.linkText("Touring");
 	By widthList = By.cssSelector("select[data-field-name='Width']");
 	By aspectRatio = By.cssSelector("select[data-field-name='Aspect Ratio']");
 	By rimSize = By.cssSelector("select[data-field-name='Rim Size']");
