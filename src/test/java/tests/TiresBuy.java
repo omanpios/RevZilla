@@ -31,7 +31,7 @@ public class TiresBuy extends Base {
 		Objects lpObjects = new Objects(driver);
 		Actions action = new Actions(driver);
 		action.moveToElement(lpObjects.tiresButton()).build().perform();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 
 	}
 

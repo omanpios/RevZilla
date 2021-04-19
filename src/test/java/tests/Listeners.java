@@ -31,7 +31,7 @@ public class Listeners extends Base implements ITestListener {
 		// TODO Auto-generated method stub
 
 		extentTest.get().log(Status.PASS, "Test Passed");
-		
+
 		WebDriver driver = null;
 		String testMethodName = result.getMethod().getMethodName();
 
@@ -58,7 +58,7 @@ public class Listeners extends Base implements ITestListener {
 		// TODO Auto-generated method stub
 
 		extentTest.get().fail(result.getThrowable());
-		
+
 		WebDriver driver = null;
 		String testMethodName = result.getMethod().getMethodName();
 

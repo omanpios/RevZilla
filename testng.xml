@@ -17,5 +17,10 @@
 			<class name="tests.TopButtons" />
 		</classes>
 	</test>
+		<test name="FooterLinks">
+		<classes>
+			<class name="tests.FooterLinks" />
+		</classes>
+	</test>
 	
 </suite>
