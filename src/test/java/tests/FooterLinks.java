@@ -13,6 +13,7 @@ import org.openqa.selenium.Keys;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.sun.tools.sjavac.Log;
 
@@ -35,10 +36,10 @@ public class FooterLinks extends Base {
 	}
 
 	@Test
-	public void footerUtility() throws InterruptedException {
+	public void footerUtility() throws InterruptedException, IOException {
 		Objects lpObjects = new Objects(driver);
 		int footer = lpObjects.footerUtility().findElements(By.tagName("a")).size();
-
+		
 		for (int i = 1; i < footer; i++) {
 			String clickOnLink = Keys.chord(Keys.CONTROL, Keys.ENTER);
 			lpObjects.footerUtility().findElements(By.tagName("a")).get(i).sendKeys(clickOnLink);
@@ -48,6 +49,9 @@ public class FooterLinks extends Base {
 			driver.switchTo().window(handlesList.get(1));
 			Thread.sleep(1000);
 			Assert.assertTrue(lpObjects.homeButton().isDisplayed());
+			String tabName = driver.getTitle().trim();
+			String splitTabName = tabName.substring(0, 7);
+			getScreenshot(splitTabName, driver);
 			driver.close();
 			driver.switchTo().window(handlesList.get(0));
 

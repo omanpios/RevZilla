@@ -55,4 +55,15 @@ public class Base {
 		FileUtils.copyFile(source, new File(destinationFile));
 		return destinationFile;
 	}
+	
+	public String getScreenshot(String splitTabName, WebDriver driver2) throws IOException {
+		Calendar calendar = Calendar.getInstance();
+		SimpleDateFormat formater = new SimpleDateFormat("ddMMyyy_hhmmss");
+		
+		TakesScreenshot screenshot = (TakesScreenshot) driver;
+		File source = screenshot.getScreenshotAs(OutputType.FILE);
+		String destinationFile = System.getProperty("user.dir") + "\\reports\\footerscreenshots\\" + splitTabName+"_" + formater.format(calendar.getTime()) +".png";
+		FileUtils.copyFile(source, new File(destinationFile));
+		return destinationFile;
+	}
 }
